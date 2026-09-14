@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter Sugrim — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1B2A4A;
+      --slate:  #4A6080;
+      --amber:  #E8A020;
+      --bg:     #F8F9FA;
+      --white:  #FFFFFF;
+      --rule:   #DDE3EC;
+      --text:   #1B2A4A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 72px 48px 60px;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 52ch;
+    }
+
+    /* ── LAYOUT WRAPPER ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding-top: 56px;
+    }
+
+    section + section {
+      border-top: 1px solid var(--rule);
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #2E3D55;
+      max-width: 65ch;
+      margin-bottom: 1em;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── RESEARCH CALLOUT ── */
+    .research-callout {
+      margin-top: 24px;
+      border-left: 3px solid var(--amber);
+      padding: 20px 24px;
+      background: var(--white);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .research-callout .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+
+    .research-callout p {
+      font-size: 1rem;
+      color: var(--navy);
+      font-weight: 500;
+      max-width: 55ch;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ── DATA STORY PLACEHOLDER ── */
+    .placeholder-block {
+      margin-top: 24px;
+      background: var(--white);
+      border: 1px dashed var(--rule);
+      border-radius: 8px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .placeholder-block .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      opacity: 0.35;
+    }
+
+    .placeholder-block p {
+      color: var(--slate);
+      font-size: 0.9rem;
+      max-width: none;
+      margin: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      padding: 32px;
+      font-size: 0.8rem;
+      color: var(--slate);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 52px 24px 44px; }
+      main   { padding: 0 20px 60px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main > section {
+        opacity: 0;
+        transform: translateY(18px);
+        animation: rise 0.5s ease forwards;
+      }
+      main > section:nth-child(1) { animation-delay: 0.05s; }
+      main > section:nth-child(2) { animation-delay: 0.15s; }
+      main > section:nth-child(3) { animation-delay: 0.25s; }
+    }
+
+    @keyframes rise {
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">Student Portfolio</p>
+    <h1>Peter Sugrim</h1>
+    <p class="tagline">Freshman · Mathematics · York College</p>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm a freshman at York College studying Mathematics. I'm drawn to the elegance of
+        numbers and the way a single equation can unlock something that seemed impossibly
+        complex a moment before.
+      </p>
+      <p>
+        Outside the classroom, I love puzzles — the kind that make you sit with them,
+        turn them over, and suddenly see the piece you were missing. That habit of
+        patient, lateral thinking shapes how I approach problems in every subject.
+      </p>
+    </section>
+
+    <!-- RESEARCH -->
+    <section>
+      <h2>Research</h2>
+      <p>
+        My current research sits at the intersection of geometry, physics, and
+        engineering design. I'm investigating how the shape of a rocket's nose cone
+        influences aerodynamic drag — and what the numbers tell us about finding the
+        optimal form.
+      </p>
+
+      <div class="research-callout">
+        <p class="label">Research Topic</p>
+        <p>How Different Nose Cone Geometries Affect Aerodynamic Drag</p>
+      </div>
+    </section>
+
+    <!-- DATA STORY -->
+    <section>
+      <h2>My Data Story</h2>
+      <p>
+        This section will document the data I collect throughout my research — charts,
+        findings, and the story behind the numbers.
+      </p>
+
+      <div class="placeholder-block">
+        <div class="icon">📊</div>
+        <p>Data visualizations and analysis coming soon.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Peter Sugrim &nbsp;·&nbsp; York College
+  </footer>
+
+</body>
+</html>
